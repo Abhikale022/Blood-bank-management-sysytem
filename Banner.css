@@ -1,0 +1,107 @@
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* add this property to center the banner horizontally */
+  margin-top: 25vh;
+  padding: 20px;
+  margin-bottom: 10vh;
+  background-color: lightgray;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin-top: 4.5rem;
+  padding-top: 10px;
+  border-radius: 10px;
+}
+
+.left-container {
+  flex: 1;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 2px solid darkred;
+  background-color: white;
+}
+
+.left-container > h2 {
+  background-color: darkred;
+  color: white;
+  padding: 5px;
+  width: 100%;
+  position: relative;
+  border-radius: 10px;
+  border: 2px transparent darkorange;
+  margin: 0;
+}
+
+.left-container > h2:hover {
+  text-shadow: 1px 1px 2.5px whitesmoke;
+}
+
+th {
+  font-size: 20px;
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+td.blood__type {
+  font-size: 15px;
+  font-weight: bold;
+  color: darkred;
+  vertical-align: middle;
+}
+
+.left-container table {
+  border-spacing: 15px;
+  max-height: calc(100% - 50px);
+  overflow-y: auto;
+  width: 100%;
+  overflow-x: auto;
+  text-align: center;
+}
+
+.right-container {
+  background-color: white;
+  flex: 0 0 50%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 2px solid darkred;
+}
+
+.right-container img {
+  max-width: 100%;
+  max-height: calc(100% - 10px);
+  border-radius: 10px;
+  object-fit: contain;
+  margin-bottom: 5rem;
+}
+
+/* Add media query for screens with max width 768px */
+@media only screen and (max-width: 768px) {
+  .banner {
+    margin-top: 200px; /* decrease the margin top for smaller screens */
+  }
+
+  .left-container {
+    width: 100%; /* set full width for left container */
+    margin: 10px 0; /* remove horizontal margin */
+  }
+
+  .right-container {
+    width: 100%; /* set full width for right container */
+    margin: 10px 0; /* remove horizontal margin */
+  }
+}
